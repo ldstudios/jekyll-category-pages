@@ -77,7 +77,7 @@ module Jekyll
           category_pages = []
           (1..page_number).each do |current_page|
             # Collect all paths in the first pass and generate the basic page templates.
-            page_name = current_page == 1 ? INDEXFILE : "page#{current_page}.html"
+            page_name = current_page == 1 ? INDEXFILE : "page#{current_page}/index.html"
             page_paths.push page_name
             new_page = CategoryIndexPage.new(site, category_path, page_name, category, category_layout, posts_in_category, true)
             category_pages.push new_page
